@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+</head>
+
+
+<body style="text-align: center;">
+    <div id="count_down1" style="font-size: 40px">1</div>
+    <div id="count_down2">2</div>
+    <div id="count_down3">3</div>
+    <div id="count_down4">4</div>
+</body>
+
+
+<script>
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    countdown();
+});
+
+function countdown(){
+    setInterval(function(){  
+        var current_time = Date.now();
+        var counter1end = 1489014000000;
+        var counter1 = counter1end-current_time;
+        var counter2end = 1488806700000;
+        var counter2 = counter2end-current_time;
+        $('#count_down1').text("Tid i ms till inlämning av halvtids rapport : " + counter1);
+        $('#count_down2').text("test stress : "+ counter2);
+    }, 20);
+}
+
+</script>
+
+</html>
+
+
